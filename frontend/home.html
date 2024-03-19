@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <style>
+       /* Adjust sidebar width */
+   .sidebar {
+    width: 250px;
+    }
+  .list-group-item {
+    border: none;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: none;
+    outline: none;
+  } 
+
+.navbar-nav{
+  margin-right: 100px;
+}
+ footer {
+    padding-bottom: 150px;
+    padding-top: 150px;
+    background-image: url('./bg.png');
+    background-size: cover; /* or 'contain', depending on your preference */
+    background-repeat: no-repeat;
+    background-position: center center;
+/* You can also specify other styles such as height, padding, etc. */
+}
+   </style>
+</head>
+<body>
+<div id="page-content-wrapper">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand p-4" href="#">
+      <img src="darwinbox.jpg" alt="Your Logo" width="50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>STREAMBOX</b>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item mr-3">
+          <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+          </form>
+        </li>
+        <li class="nav-item ml-3">
+          <form class="form-inline">
+            <button style="border: none; outline: none;" class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-bell"></i>
+          </form>
+        </li>
+        <li class="nav-item ml-3">
+          <form class="form-inline">
+            <button style="border: none; outline: none;" class="btn btn-outline-light my-2 my-sm-0" type="submit"><i class="fas fa-user"></i>
+          </form>
+        </li>
+        <li class="nav-item ml-3"></li>
+        <form action="/auth/logout" method="post">
+          <button class="btn btn-primary" type="submit"> Logout </button>
+        </form>
+      </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar-wrapper">
+
+      <div class="list-group list-group-flush ">
+        <a href="#" class="list-group-item list-group-item-action">
+          <i class="fas fa-home"></i> &nbsp;&nbsp;Home
+        </a>
+        <form method="get">
+          <button class="list-group-item list-group-item-action" style="border: none; outline: none;">
+              <i class="fas fa-compass"></i> &nbsp;&nbsp;Explore
+          </button>
+        </form>
+        <form>
+          <button class="list-group-item list-group-item-action" style="border: none; outline: none;">
+              <i class="fas fa-fire"></i> &nbsp;&nbsp;Trending
+          </button>
+        </form>
+        <form action="/videos/uploadvideo" method="get">
+          <button class="list-group-item list-group-item-action" style="border: none; outline: none;">
+            <i class="fas fa-upload"></i> &nbsp;&nbsp; Upload a Video
+          </button>
+        </form>
+         <form>
+          <button class="list-group-item list-group-item-action" style="border: none; outline: none;">
+              <i class="fas fa-history"></i> &nbsp;&nbsp;History
+          </button>
+        </form>
+        <form>
+          <button class="list-group-item list-group-item-action" style="border: none; outline: none;">
+              <i class="fas fa-heart"></i> &nbsp;&nbsp;Liked Videos
+          </button>
+        </form>
+        <form>
+          <button class="list-group-item list-group-item-action" style="border: none; outline: none;">
+              <i class="fas fa-clock"></i> &nbsp;&nbsp;Watch Later
+          </button>
+        </form>
+        <form>
+          <button class="list-group-item list-group-item-action" style="border: none; outline: none;">
+              <i class="fas fa-rss"></i> &nbsp;&nbsp;Subscriptions
+          </button>
+        </form>
+        <form>
+          <button class="list-group-item list-group-item-action" style="border: none; outline: none;">
+              <i class="fas fa-list"></i> &nbsp;&nbsp;Category
+          </button>
+        </form>
+      </div>
+  </div>
+</div>
+<footer>
+</footer>
+</body>
+</html>
